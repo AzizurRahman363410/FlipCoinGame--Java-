@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="450.0" style="-fx-background-color: #26A69A;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.controller.MailController">
+   <children>
+      <AnchorPane layoutX="33.0" layoutY="25.0" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #009688; -fx-background-radius: 20;">
+         <children>
+            <Label fx:id="mailFrom" layoutX="50.0" layoutY="61.0" text="From : ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="mailTo" layoutX="50.0" layoutY="92.0" text="To : ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="185.0" layoutY="25.0" text="Mail">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="153.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/gmail.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="53.0" layoutY="153.0" text="Massages" />
+            <TextArea fx:id="mailMassage" editable="false" focusTraversable="false" layoutX="50.0" layoutY="170.0" prefHeight="70.0" prefWidth="300.0" />
+            <Label layoutX="55.0" layoutY="254.0" text="Replay" />
+            <TextArea fx:id="mailReplay" layoutX="50.0" layoutY="271.0" prefHeight="70.0" prefWidth="300.0" />
+            <Button fx:id="mailSend" layoutX="52.0" layoutY="353.0" mnemonicParsing="false" onAction="#onActionSend" style="-fx-background-color: #66BB6A;" text="Send">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <Label fx:id="mailSubject" layoutX="50.0" layoutY="121.0" text="Subject : ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="deshbord" prefHeight="536.0" prefWidth="750.0" style="-fx-background-color: #26A69A;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.controller.DeshbordController">
+   <children>
+      <LineChart fx:id="charts" layoutX="14.0" layoutY="73.0" legendVisible="false" prefHeight="375.0" prefWidth="500.0" style="-fx-background-color: #009688;" title="Play Charts">
+        <xAxis>
+          <CategoryAxis label="Last 5 players" side="BOTTOM" fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Amount of Coin" fx:id="yAxis" side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <VBox layoutX="546.0" layoutY="73.0" prefHeight="375.0" prefWidth="190.0" style="-fx-background-color: #009688; -fx-background-radius: 20;">
+         <children>
+            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/account-circle.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="75.0" top="10.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label fx:id="name" text="User : Nazmul Hoque" textFill="#141212">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Account">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="70.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="cash" text="Cash TK :2000">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="coin" text="Coin :2000">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Pending :500">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Last CashOut:500">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="30.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#buycoin" prefWidth="140.0" style="-fx-background-color: #00E676;" text="Buy Coin">
+               <VBox.margin>
+                  <Insets left="30.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#addfund" prefWidth="140.0" style="-fx-background-color: #00E676;" text="Add fund">
+               <VBox.margin>
+                  <Insets left="30.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#cashout" prefWidth="140.0" style="-fx-background-color: #00E676;" text="CashOut">
+               <VBox.margin>
+                  <Insets left="30.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="40.0" layoutY="258.0" mnemonicParsing="false" onAction="#convartcoin" prefWidth="140.0" style="-fx-background-color: #00E676;" text="Convert Coin">
+               <VBox.margin>
+                  <Insets left="30.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Button layoutX="109.0" layoutY="18.0" mnemonicParsing="false" onAction="#mail" prefWidth="20.0" style="-fx-background-color: #00E676;">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/gmail.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="14.0" layoutY="18.0" text="Deshboard">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="211.0" layoutY="471.0" mnemonicParsing="false" onAction="#play" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: #00E676;" text="Play">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

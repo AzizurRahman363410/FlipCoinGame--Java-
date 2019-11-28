@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="loginPane" prefHeight="530.0" prefWidth="750.0" style="-fx-background-color: #26A69A;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="game.controller.LoginController">
+   <children>
+      <AnchorPane layoutX="200.0" layoutY="90.0" prefHeight="350.0" prefWidth="350.0" style="-fx-background-color: #009688; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="154.0" layoutY="28.0" text="Login">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="131.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/login.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="71.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/lock.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="71.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/account.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="username" focusTraversable="false" layoutX="105.0" layoutY="78.0" promptText="USERNAME">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="password" focusTraversable="false" layoutX="105.0" layoutY="140.0" promptText="PASSWORD">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+            <Button layoutX="104.0" layoutY="227.0" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="175.0" style="-fx-background-color: #00E676;" text="Login">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/login-variant.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="193.0" layoutY="187.0" onMouseClicked="#onMouse" text="Forget Password">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Label>
+            <Label fx:id="logLabel" layoutX="131.0" layoutY="283.0">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
